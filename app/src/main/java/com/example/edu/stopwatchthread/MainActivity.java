@@ -12,11 +12,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button buttonStart, buttonPause, buttonReset;
     TextView textResult;
-    long startTime = 0, timeBuff = 0;
     Handler  handler;
-    long updateTime=0,millisecondTime=0;
-    int minutes, seconds,milliSeconds;
-
+    long startTime = 0, timeBuff = 0, millisecondTime=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public Runnable runnable = new Runnable() {
+        long updateTime=0;
+        int minutes, seconds,milliSeconds;
+
         @Override
         public void run() {
             millisecondTime = SystemClock.uptimeMillis() - startTime;
