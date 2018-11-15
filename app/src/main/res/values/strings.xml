@@ -2,5 +2,6 @@
     <string name="app_name">StopWatchThread</string>
     <string name="textViewTitle">StopWatch Thread</string>
     <string name="buttonStart">Start</string>
-    <string name="buttonStop">Stop</string>
+    <string name="buttonPhase">Pause</string>
+    <string name="buttonReset">Reset</string>
 </resources>

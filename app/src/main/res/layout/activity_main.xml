@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -18,55 +19,59 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="30dp" />
+        app:layout_constraintGuide_begin="19dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="343dp" />
+        app:layout_constraintGuide_begin="383dp" />
 
     <TextView
         android:id="@+id/textViewTitle"
-        android:layout_width="0dp"
+        android:layout_width="268dp"
         android:layout_height="35dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginLeft="58dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginRight="58dp"
+        android:layout_marginTop="7dp"
         android:gravity="center"
         android:text="@string/textViewTitle"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <Button
-        android:id="@+id/buttonStop"
+        android:id="@+id/buttonStart"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/buttonStart"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <Button
+        android:id="@+id/buttonPause"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginRight="42dp"
-        android:text="@string/buttonStop"
-        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        android:layout_marginTop="4dp"
+        android:text="@string/buttonPhase"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReset"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonStart"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <Button
-        android:id="@+id/buttonStart"
+        android:id="@+id/buttonReset"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:text="@string/buttonStart"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        android:layout_marginTop="4dp"
+        android:text="@string/buttonReset"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonPause"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <android.support.constraint.Guideline
@@ -74,19 +79,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="176dp" />
+        app:layout_constraintGuide_begin="211dp" />
 
     <TextView
         android:id="@+id/textViewResult"
         android:layout_width="182dp"
         android:layout_height="39dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginBottom="79dp"
         android:gravity="center"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewTitle" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="107dp" />
 
 </android.support.constraint.ConstraintLayout>
